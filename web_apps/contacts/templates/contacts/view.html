@@ -1,0 +1,24 @@
+<div class="hero span6 offset1">
+    <h3 class="alert alert-warning">Contacts</h3>
+    <input type="text" placeholder="search" class="input-xlarge search-query" ng-model="searchText">
+    <a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a>
+    <a href="" ng-click="predicate = 'email'; reverse=!reverse">Email</a>
+    <a href="" ng-click="predicate = 'phone'; reverse=!reverse">Phone</a>
+    <div ng-init="query()" >
+        <div ng-repeat="contact in contacts | filter:searchText | orderBy:predicate:reverse">
+            <ul>
+                <li><strong>Name:</strong> {{contact.name}}</li>
+                <span>
+                    <strong>Email:</strong>{{contact.email}},</span>
+                <span>
+                    <strong>Phone:</strong>{{contact.phone}}</span>
+                <p>
+                    <a ng-href="/contacts/#/edit/{{contact._id}}" class="btn btn-info">Edit</a>
+                    <button ng-click="delete(contact)" class="btn btn-danger">Delete</button>                
+                </p>
+            </ul>
+
+        </div>
+    </div>
+
+</div>

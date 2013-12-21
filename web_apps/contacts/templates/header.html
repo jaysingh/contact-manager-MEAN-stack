@@ -1,0 +1,6 @@
+<div ng-controller="AuthController">
+	<h3 class="alert alert-danger span4" ng-hide="!auth.user">Welcome {{auth.user}}</h3>
+	<div class="span8">
+		<button class="btn btn-inverse pull-right" ng-hide="!auth.user" ng-click="logout()">logout</button>
+	</div>	
+</div>

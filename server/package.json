@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "latest",
+    "passport": "latest",
+    "passport-local": "latest",
+    "passport-local-mongoose": "latest",
+    "underscore": "latest"
+  },
+  "devDependencies": {
+  },
+  "name": "contact_app",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --recursive -R spec -t 5000"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.8.x"
+  }
+}

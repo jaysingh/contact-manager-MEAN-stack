@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="contactApp">
+	<title>Contact app</title>
+	<head>
+	    <script src="../common/libs/angular/angular.js"></script>		
+	    <script src="../common/libs/angular/angular-cookies.js"></script>
+
+		<script src="./app.js"></script>
+
+		<script src="./scripts/authCtrl.js"></script>
+		<script src="./scripts/contactCtrl.js"></script>
+
+ 		<script src="./scripts/authSvc.js"></script>
+ 		<script src="./scripts/contactSvc.js"></script>
+
+		<script src='../common/libs/underscore/underscore.js'></script>
+
+ 		<link rel="stylesheet" href="../common/libs/bootstrap/css/bootstrap.css">
+	    <link rel="stylesheet" href="../common/styles/bootstrap-cosmo-2.3.2.css">
+	</head>
+
+	<body>
+		<div ng-include="'./templates/header.html'"></div>
+		<div ng-view></div>	    
+	</body>
+
+</html>		

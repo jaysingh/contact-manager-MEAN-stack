@@ -1,0 +1,35 @@
+<div class="hero span6 offset1">
+<div ng-init="edit()">
+<h3 class="alert alert-warning">Edit contact</h3>
+<form class="form-horizontal" name="contact_edit">
+	<div class="control-group">
+		<label class="control-label">Name</label>
+		<div class="controls">
+			<input id="name" name="name" required="" type="text" ng-model="contact.name">
+		</div>
+	</div>
+
+
+	<div class="control-group">
+		<label class="control-label">Email Id</label>
+		<div class="controls">
+			<input id="email" name="email" required="" type="email" ng-model="contact.email">
+		</div>
+	</div>	
+	
+	<div class="control-group">
+		<label class="control-label">Phone</label>
+		<div class="controls">
+			<input id="phone" name="phone" required="" type="text" ng-model="contact.phone">
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			<button id="submit" name="submit" ng-click="update(contact._id)" class="btn btn-success btn-large">Update</button>
+		</div>
+	</div>		
+
+</form>
+</div>
+</div>
