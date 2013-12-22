@@ -7,7 +7,7 @@
     <div ng-init="query()" >
         <div ng-repeat="contact in contacts | filter:searchText | orderBy:predicate:reverse">
             <ul>
-                <li><strong>Name:</strong> {{contact.name}}</li>
+                <li class=""><strong>Name:</strong> {{contact.name}}</li>
                 <span>
                     <strong>Email:</strong>{{contact.email}},</span>
                 <span>

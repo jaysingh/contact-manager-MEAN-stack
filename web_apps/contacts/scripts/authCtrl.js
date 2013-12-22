@@ -8,9 +8,9 @@ function AuthController($scope, $route, $http, $location, $routeParams, $cookieS
 		}	
 	};
 
-	if (!authService.isLoggedIn()) {
-		$location.path('/');
-	}
+	// if (!authService.isLoggedIn()) {
+	// 	$location.path('/');
+	// }
 
 
 	if ($cookieStore.get('logged_in') == true) {

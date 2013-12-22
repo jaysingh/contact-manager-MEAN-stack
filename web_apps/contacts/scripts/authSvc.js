@@ -74,14 +74,13 @@ contactApp.factory('authService', function($rootScope, $cookieStore, $location) 
 	}
 
 	authSvc.register = function($scope, $http, $location) {
-	    var request = $http.post('/api/v1/auth/register', {username: $scope.user.name, password: $scope.user.pass1, email: $scope.user.email});
-	    return request.then(function (response) {
-	    	if (response.data.status === "success") {
-	    		$location.path('/');
+	    $http.post('/api/v1/auth/register', 
+	    	{
+	    		username: $scope.user.name, password: $scope.user.pass1, email: $scope.user.email
 	    	}
-		}, function(response) {
-			
-		});
+	    ).success(function (data, status, header, config) {
+	    	$location.path('/');
+	    })	    
 	}
 
 	authSvc.broadcastChange = function() {
